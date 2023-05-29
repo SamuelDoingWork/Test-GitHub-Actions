@@ -24,9 +24,7 @@ namespace TestProject1
         [Fact]
         public void DeleteRepo()
         {
-            var act = Repository.ReadRepo();
-
-            Assert.Equal("Readed repo", act);
+           throw new NotImplementedException();
         }
     }
 }
