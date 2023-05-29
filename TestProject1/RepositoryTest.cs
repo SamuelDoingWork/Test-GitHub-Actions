@@ -20,5 +20,13 @@ namespace TestProject1
 
             Assert.Equal("Readed repo", act);
         }
+
+        [Fact]
+        public void DeleteRepo()
+        {
+            var act = Repository.ReadRepo();
+
+            Assert.Equal("Readed repo", act);
+        }
     }
 }
