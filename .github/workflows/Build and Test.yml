@@ -18,6 +18,8 @@ jobs:
           dotnet-version: '7.x'
       - name: Install dependencies
         run: dotnet restore
+      - name: test
+        run: echo "$GITHUB.HEAD_REF"
       - name: Build
         run: dotnet build --configuration Release --no-restore
       - name: Test
