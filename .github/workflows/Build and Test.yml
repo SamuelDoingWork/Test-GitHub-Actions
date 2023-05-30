@@ -19,7 +19,7 @@ jobs:
       - name: Install dependencies
         run: dotnet restore
       - name: test
-        run: echo "$GITHUB.HEAD_REF"
+        run: echo "{{ github.head_ref	}}"
       - name: Build
         run: dotnet build --configuration Release --no-restore
       - name: Test
