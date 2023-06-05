@@ -7,7 +7,7 @@ on:
 
 jobs:
   test2:
-    uses: <owner>/<repo>/.github/workflows/called.yml@<ref>
+    uses: SamuelDoingWork/Test-GitHub-Actions/.github/workflows/called.yml@<ref>
     with:
       x: false
   build-and-test:
