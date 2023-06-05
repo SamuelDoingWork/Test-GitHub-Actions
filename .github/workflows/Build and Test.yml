@@ -6,6 +6,10 @@ on:
       - develop
 
 jobs:
+  test2:
+    uses: <owner>/<repo>/.github/workflows/called.yml@<ref>
+    with:
+      x: false
   build-and-test:
 
     runs-on: ubuntu-latest
