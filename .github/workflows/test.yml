@@ -9,5 +9,5 @@ jobs:
   test1:
     runs-on: ubuntu-latest
     steps:
-    - run: echo '${{inputs.x}}'
+    - run: echo eee ${{inputs.x}}
       if: ${{inputs.x}}
