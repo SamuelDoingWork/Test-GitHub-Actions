@@ -8,6 +8,22 @@ on:
 jobs:
   test1:
     runs-on: ubuntu-latest
+    outputs:
+      is_alpha: ${{ steps.check_alpha.outputs.match }}
+
     steps:
-    - run: echo eee ${{inputs.x}}
-      if: ${{inputs.x}}
+      - 
+        name: Check alpha
+        id: check_alpha
+        run: |
+          if [[ "Deploy alpha [staging 1.0.0]" =~ \[staging[[:space:]]v?[0-9].[0-9].[0-9]\] ]]; then
+              echo alpha
+              echo "match=true" >> $GITHUB_OUTPUT
+          fi
+  test2:
+    runs-on: ubuntu-latest
+    needs: test1
+    steps:
+      -
+        name: test
+        run: echo result is ${{ needs.check-alpha.outputs.is_alpha }}
