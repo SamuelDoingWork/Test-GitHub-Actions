@@ -26,4 +26,4 @@ jobs:
     steps:
       -
         name: test
-        run: echo result is ${{ needs.check-alpha.outputs.is_alpha }}
+        run: echo result is ${{ needs.test1.outputs.is_alpha }}
