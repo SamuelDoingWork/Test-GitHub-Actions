@@ -1,5 +1,4 @@
-using ConsoleApp1;
-
+using ConsoleApp1; 
 namespace TestProject1
 {
     public class RepositoryTest
@@ -19,6 +18,12 @@ namespace TestProject1
             var act = Repository.ReadRepo();
 
             Assert.Equal("Readed repo", act);
+        }
+
+        [Fact]
+        public void DeleteRepo()
+        {
+           throw new NotImplementedException();
         }
     }
 }
