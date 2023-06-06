@@ -23,7 +23,7 @@ jobs:
   test2:
     runs-on: ubuntu-latest
     needs: check-alpha
-    if: ${{ needs.check-alpha.outputs.is_alpha == true }}
+    if: ${{ needs.check-alpha.outputs.is_alpha == 'true' }}
     steps:
       -
         name: test
