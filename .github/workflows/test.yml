@@ -17,7 +17,7 @@ jobs:
         id: check_alpha
         run: |
           if [[ "Deploy alpha [staging 1.0.0]" =~ \[staging[[:space:]]v?[0-9].[0-9].[0-9]\] ]]; then
-              echo $$GITHUB_REF
+              echo $GITHUB_REF
               echo develop > $GITHUB_REF
               echo "match=true" >> $GITHUB_OUTPUT
           fi
